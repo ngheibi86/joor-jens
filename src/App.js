@@ -1,25 +1,62 @@
 import React from 'react';
 import logo from './logo.svg';
+import {Router} from '@reach/router';
 import './App.css';
+import About from './pages/About.jsx';
+import Blog from './pages/Blog.jsx';
+import Contact from './pages/Contact.jsx';
+import Home from './pages/Home.jsx';
+import Portfolio from './pages/Portfolio.jsx';
+import ResponsiveNavigation from './components/ResponsiveNavigation';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  const navLinks=[
+    {
+      text: 'جستجوی کالا',
+      path: '/portfolio',
+      icon: 'search-inactive'
+    },
+  
+   {
+     text: 'دسته بندی کالا',
+     path: '/about',
+     icon: 'category-inactive'
+   },
+   {
+     text: 'اسکنر',
+     path: '/blog',
+     icon: 'scan-inactive'
+   },
+   {
+     text: 'شرکت های پخش',
+     path: '/portfolio',
+     icon: 'DS-inactive'
+   },
+ 
+  {
+    text: 'لیست سفارشات',
+    path: '/contact',
+    icon: 'order-inactive'
+  }
+  ]
+      return (
+        <div className="App">
+          <ResponsiveNavigation
+          navLinks={ navLinks }
+          logo={ logo }
+          // background="#fff"
+          // hoverBackground="#ddd"
+          linkColor="#sss"
+        />
+          <Router>
+            <Contact path='/contact'></Contact>
+            <About path='/about'></About>
+            <Home path='/home'></Home>
+            <Portfolio path='/portfolio'></Portfolio>
+            <Blog path='/blog'></Blog>
+          </Router>
+        </div>
   );
 }
 
