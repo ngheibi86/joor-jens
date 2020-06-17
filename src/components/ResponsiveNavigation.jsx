@@ -13,20 +13,22 @@ function ResponsiveNavigation({ background, hoverBackground, linkColor, navLinks
             <ul
                 style={{ background: background }}
                 className={ navOpen ? 'active' : '' }  >
-                           
              
                 { navLinks.map((link, index) => 
                     <li
                         key={ index }
                         onMouseEnter={ () => { setHoverIndex(index) } }
                         onMouseLeave={ () => { setHoverIndex(-1) } }
-                        style={{ background: hoverIndex === index ? (hoverBackground || '#999') : '' }}
+                   style={{ background: hoverIndex === index ? (hoverBackground || '#999') : '',
+                   marginLeft:index===1 ? "450px" : " ",   
+                }}
                     >
                         <Link
                             to={link.path}
                             style={{ color: linkColor }}>
-                         <i className={link.icon} ></i>   { link.text } 
+                         <i className={link.icon} ></i> { link.text } 
                         </Link>
+                       
                     </li>
                 )}
                    <figure className="image-logo" onClick={ () => { setNavOpen(!navOpen) } }>
