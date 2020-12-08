@@ -20,32 +20,38 @@ class Login extends Component {
 
 	submitLogin(e) {}
 
+	
+
 	render() {
 		return (
 			<div className="root-container">
 				<div className="box-controller">
-                    <div className={"controller" + (this.state.isLoginOpen ? "selected-tab" : "")}
-                     onClick={this.showLoginBox.bind(this)}>
+					<div
+						className={'controller' + (this.state.isLoginOpen ? ' selected-tab' : '')}
+						onClick={this.showLoginBox.bind(this)}
+					>
 						Login
 					</div>
 
-                    <div className={"controller"  + (this.state.isRegisterOpen ? "selected-tab" : "")} 
-                    onClick={this.showRegisterBox.bind(this)}>
+					<div
+						className={'controller' + (this.state.isRegisterOpen ? ' selected-tab' : '')}
+						onClick={this.showRegisterBox.bind(this)}
+					>
 						Register
 					</div>
 				</div>
-				<div className={"box-container"}>
+				<div className={'box-container'}>
 					{this.state.isLoginOpen && (
 						<div className="inner-container">
 							<div className="header">Login</div>
 							<div className="box">
 								<div className="input-group">
-									<label htmlFor="username" >Username</label>
+									<label htmlFor="username">Username</label>
 									<input type="text" name="username" placeholder="username" className="login-input" />
 								</div>
 
 								<div className="input-group">
-									<label htmlFor="password" >Password</label>
+									<label htmlFor="password">Password</label>
 									<input type="text" name="password" placeholder="password" className="login-input" />
 								</div>
 

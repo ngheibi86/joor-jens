@@ -44,15 +44,11 @@ $blue_theme: #70a1ff;
 .selected-controller {
     transition: border 0.5s ease-out;
     border-bottom: 2px solid $blue_theme;
-    flex: 1;
-    text-align: center;
-    height: 100%;
-    line-height: 2;
-    cursor: pointer;
 }
 
 .selected-tab {
-   background-color: green($color: #000000);
+    transition: border 0.5s ease-out;
+    border-bottom: 2px solid $blue_theme;
 }
 
 
