@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,GAAG,AAAA,mBAAmB,CAAC;EACnB,UAAU,EAAE,OAAO;EACnB,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;CACd",
-    "sources": [
-        "toolbar.scss"
-    ],
-    "names": [],
-    "file": "toolbar.css"
-}
